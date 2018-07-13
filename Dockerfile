@@ -1,10 +1,12 @@
 FROM ubuntu:latest
 
-# dependenc
+MAINTAINER gpmontt 
+
+COPY ./keyboard /etc/default/keyboard
+# dependency
 RUN apt-get update && apt-get install -y \
 tmux\ 
-git\
-python-dev\
+vi\
 
 # installation java 8 
 RUN add-apt-repository -y ppa:webupd8team/java \
