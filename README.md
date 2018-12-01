@@ -11,6 +11,10 @@ RUN make /app
 CMD python /app/app.py
 ```
 
+
+
+
+
 Each instruction creates one layer:
 
     FROM creates a layer from the ubuntu:15.04 Docker image.
