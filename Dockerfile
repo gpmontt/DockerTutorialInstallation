@@ -1,9 +1,29 @@
-FROM ubuntu:latest
+# download the image from docker
+FROM ubuntu:18.04
 
-MAINTAINER gpmontt 
+# Author / Maintainer
+MAINTAINER Giovanni Perez
 
-#COPY ./keyboard /etc/default/keyboard
-# dependency
-RUN apt-get update && apt-get install -y tmux
+# Install usefull packages for project
+#
+RUN apt-get update && apt-get install -y \
+	build-essential \
+	wget \
+	curl \
+	gdb-multiarch \
+	xz-utils \
+	git \
+	unzip \
+	zip \
+	multistrap \
+	cmake \
+	python \
+	vim \
+	pkg-config \
+ && rm -rf /var/lib/apt/lists/*
+# add a whatever volume 
+VOLUME ["qt5pibuilder"]
+# WORKDIR used to change the working directory
+WORKDIR /tmp/qt5pibuilder
 
 

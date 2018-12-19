@@ -51,3 +51,13 @@ All info about in your file Docker will be generate. For this you need to run:
 docker build -t nameofyourimage .
 ```
 
+
+# Using Docker HUB  building an image
+
+For push an image to Docker Hub, is necessary specify the username as part of the image name.  For this case you need:
+- *username_in_dockerHUB/name_of_project*
+
+the command line is: 
+```
+$ docker build -t docker pull gpmontt/crosscompilerrpiqt5 bash
+```
