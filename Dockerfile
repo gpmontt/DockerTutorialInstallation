@@ -26,8 +26,4 @@ VOLUME ["qt5pibuilder"]
 # WORKDIR used to change the working directory
 WORKDIR /tmp/qt5pibuilder
 
-ENV name velo  
-RUN ls -lah
-#CMD ["/bin/sh", "-c", "/qt5pibuilder/build -c"]
-
 
